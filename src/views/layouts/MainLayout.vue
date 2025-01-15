@@ -61,7 +61,19 @@ const session = computed(() => {
 const linksList = computed(() => {
 
   const linksList = [
-    ///
+
+    // {
+    //   title: 'Task Statuses',
+    //   route: '/lists/tasks-tatuses',
+    // },
+    // {
+    //   title: 'Tasks',
+    //   route: '/lists/tasks',
+    // },
+    {
+      title: 'Todo Lists',
+      route: '/lists/todo-lists',
+    },
   ];
 
 

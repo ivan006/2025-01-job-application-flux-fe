@@ -50,7 +50,61 @@ const routes = [
               breadcrumbParentName: '/lists/users',
               requiresAuth: false,
             },
-          }
+          },
+          {
+            path: '/lists/tasks-tatuses',
+            name: '/lists/tasks-tatuses',
+            component: () => import('src/controllers/lists/tasks-tatuses/TaskstatusListController.vue'),
+            meta: {
+              breadcrumbName: 'Taskstatuses',
+              breadcrumbParentName: '',
+            },
+          },
+          {
+            path: '/lists/tasks-tatuses/:rId/:rName',
+            name: '/lists/tasks-tatuses/:rId/:rName',
+            component: () => import('src/controllers/lists/tasks-tatuses/TaskstatusReadController.vue'),
+            meta: {
+              breadcrumbName: ':rName',
+              breadcrumbParentName: '/lists/tasks-tatuses',
+            },
+          },
+          {
+            path: '/lists/tasks',
+            name: '/lists/tasks',
+            component: () => import('src/controllers/lists/tasks/TaskListController.vue'),
+            meta: {
+              breadcrumbName: 'Tasks',
+              breadcrumbParentName: '',
+            },
+          },
+          {
+            path: '/lists/tasks/:rId/:rName',
+            name: '/lists/tasks/:rId/:rName',
+            component: () => import('src/controllers/lists/tasks/TaskReadController.vue'),
+            meta: {
+              breadcrumbName: ':rName',
+              breadcrumbParentName: '/lists/tasks',
+            },
+          },
+          {
+            path: '/lists/todo-lists',
+            name: '/lists/todo-lists',
+            component: () => import('src/controllers/lists/todo-lists/TodoListListController.vue'),
+            meta: {
+              breadcrumbName: 'TodoLists',
+              breadcrumbParentName: '',
+            },
+          },
+          {
+            path: '/lists/todo-lists/:rId/:rName',
+            name: '/lists/todo-lists/:rId/:rName',
+            component: () => import('src/controllers/lists/todo-lists/TodoListReadController.vue'),
+            meta: {
+              breadcrumbName: ':rName',
+              breadcrumbParentName: '/lists/todo-lists',
+            },
+          },
         ],
         meta: { requiresAuth: false }
       }
