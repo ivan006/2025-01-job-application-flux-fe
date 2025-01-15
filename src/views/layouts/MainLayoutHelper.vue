@@ -13,7 +13,7 @@
             <q-avatar>
               <!--<img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">-->
 
-              <q-icon name="school" size="lg" style="opacity: 50%" />
+              <q-icon name="check" size="lg" style="opacity: 50%" />
             </q-avatar>
 
             <q-toolbar-title>{{ siteTitle }}</q-toolbar-title>
@@ -58,7 +58,7 @@
           <!--<q-btn flat round dense icon="menu" class="q-mr-sm" />-->
           <q-avatar>
             <!--<img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">-->
-            <q-icon name="school" size="lg" style="opacity: 50%" />
+            <q-icon name="check" size="lg" style="opacity: 50%" />
           </q-avatar>
 
           <q-toolbar-title>{{ siteTitle }}</q-toolbar-title>
@@ -146,7 +146,7 @@ const checkScreenWidth = () => {
 
 
 const leftDrawerOpen = ref(false);
-const siteTitle = ref('Lorum Ipsum');
+const siteTitle = ref('To Do');
 
 function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;

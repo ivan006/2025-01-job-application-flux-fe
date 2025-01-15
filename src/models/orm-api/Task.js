@@ -63,7 +63,7 @@ export default class Task extends MyBaseModel {
         return {
             'id': this.attr('').nullable(),
             'to_do_list_id': this.attr(''),
-            'status_id': this.attr(''),
+            'status_id': this.attr('').nullable(),
             'name': this.attr(''),
             'created_at': this.attr('').nullable(),
             'updated_at': this.attr('').nullable(),
