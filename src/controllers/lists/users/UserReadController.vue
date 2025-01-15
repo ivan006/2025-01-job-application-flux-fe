@@ -7,27 +7,27 @@
           />
       </q-card>
 
-      <div
-        v-show="initialLoadHappened"
-      >
+      <!--<div-->
+      <!--  v-show="initialLoadHappened"-->
+      <!--&gt;-->
 
-        <div class="row  q-col-gutter-md">
-          <div class="col-xl-6 col-md-6 col-sm-12 col-xs-12">
+      <!--  <div class="row  q-col-gutter-md">-->
+      <!--    <div class="col-xl-6 col-md-6 col-sm-12 col-xs-12">-->
 
-            <q-card class="" style="overflow: hidden;">
-              <SectionComponent
-                label="Lorum Ipsum"
-                noBorder
-              >
-                <div class="q-ma-md">
-                  ...
-                </div>
-              </SectionComponent>
-            </q-card>
+      <!--      <q-card class="" style="overflow: hidden;">-->
+      <!--        <SectionComponent-->
+      <!--          label="Lorum Ipsum"-->
+      <!--          noBorder-->
+      <!--        >-->
+      <!--          <div class="q-ma-md">-->
+      <!--            ...-->
+      <!--          </div>-->
+      <!--        </SectionComponent>-->
+      <!--      </q-card>-->
 
-          </div>
-        </div>
-      </div>
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--</div>-->
     </div>
 </template>
 
@@ -40,7 +40,7 @@ import SectionComponent from "src/views/SectionComponent.vue";
 export default {
     name: 'User-read-controller',
     components: {
-      SectionComponent,
+      // SectionComponent,
         userRead,
     },
   data() {

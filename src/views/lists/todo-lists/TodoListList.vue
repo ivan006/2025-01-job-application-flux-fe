@@ -7,6 +7,8 @@
         :parentKeyValuePair="parentKeyValuePair"
         :fetchFlags="fetchFlags"
         :noBorder="noBorder"
+        :templateListTable="templateListTable"
+        :relationships="['tasks']"
     />
 </template>
 
@@ -36,6 +38,44 @@ export default {
             default: () => ({})
         }
     },
+  data(){
+    return {
+      templateListTable: [
+        // {
+        //   type: "function",
+        //   function: (item) => `${item.dayNumber}`,
+        //   label: "Day",
+        // },
+        // {
+        //   type: "function",
+        //   function: (item) => `${item.date} `,
+        //   label: "Date",
+        // },
+        {
+          field: "id",
+        },
+        {
+          field: "name",
+        },
+        {
+          type: "function",
+          function: (item) => `${item.tasks.filter(task => task.status_id === 1).length}/${item.tasks.length}`,
+          label: "Completion",
+        },
+        {
+          field: "created_at",
+        },
+        {
+          field: "updated_at",
+        },
+        {
+          hideLabel: true,
+          field: "actions",
+        },
+
+      ],
+    }
+  },
 
     computed: {
         superTableModel() {
