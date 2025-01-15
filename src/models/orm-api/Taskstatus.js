@@ -5,7 +5,7 @@ export default class Taskstatus extends MyBaseModel {
     static entity = 'taskstatus';
     static entityUrl = '/api/tasks-tatuses';
     static primaryKey = 'id';
-    static titleKey = 'id';
+    static titleKey = 'name';
     static entityHumanName = 'Taskstatus';
     static openRecord(pVal, item, router){
       router.push({

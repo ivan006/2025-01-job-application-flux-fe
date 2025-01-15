@@ -6,7 +6,7 @@ export default class Task extends MyBaseModel {
     static entity = 'task';
     static entityUrl = '/api/tasks';
     static primaryKey = 'id';
-    static titleKey = 'id';
+    static titleKey = 'name';
     static entityHumanName = 'Task';
     static openRecord(pVal, item, router){
       router.push({

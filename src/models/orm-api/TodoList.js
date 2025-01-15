@@ -5,7 +5,7 @@ export default class TodoList extends MyBaseModel {
     static entity = 'todolist';
     static entityUrl = '/api/todo-lists';
     static primaryKey = 'id';
-    static titleKey = 'id';
+    static titleKey = 'name';
     static entityHumanName = 'TodoList';
     static openRecord(pVal, item, router){
       router.push({
