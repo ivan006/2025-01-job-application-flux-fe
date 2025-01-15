@@ -29,8 +29,8 @@ export default class Task extends MyBaseModel {
         editable: (item) => true,
         creatable: () => true,
     };
-    
-    
+
+
     static hooks = {
         createComplete: (response) => {
         },
@@ -41,13 +41,27 @@ export default class Task extends MyBaseModel {
             'to_do_list_id': { linkablesRule: () => { return {} } },
             'status_id': { linkablesRule: () => { return {} } },
             'name': {},
-            'created_at': {},
-            'updated_at': {}
+      'created_at': {
+        autoFill(item){
+          if (item.created_at){
+            return item.created_at
+          } else {
+            const currentTimestamp = new Date().toISOString().slice(0, 19).replace('T', ' ');
+            return currentTimestamp
+          }
+        },
+      },
+      'updated_at': {
+        autoFill(item){
+          const currentTimestamp = new Date().toISOString().slice(0, 19).replace('T', ' ');
+          return currentTimestamp
+        }
+      },
     };
 
     static fields() {
         return {
-            'id': this.attr(''),
+            'id': this.attr('').nullable(),
             'to_do_list_id': this.attr(''),
             'status_id': this.attr(''),
             'name': this.attr(''),
